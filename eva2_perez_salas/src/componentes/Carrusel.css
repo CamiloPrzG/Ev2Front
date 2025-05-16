@@ -1,0 +1,124 @@
+.carrusel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.slick-slider {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.slick-slide div {
+  background-color: #005baa;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  font-size: 1.8rem;  /* Tamaño más grande para pantallas grandes */
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* Ajustes responsivos para pantallas medianas */
+@media (max-width: 768px) {
+  .slick-slide div {
+    font-size: 1.5rem; /* Reduce el tamaño del texto en pantallas medianas */
+    padding: 60px 15px;
+  }
+
+  .nav-btn {
+    width: 30px;   /* Ajusta el tamaño para pantallas medianas */
+    height: 30px;  /* Ajusta el tamaño para pantallas medianas */
+    font-size: 14px;
+  }
+
+  .prev-btn {
+    left: -20px;
+  }
+
+  .next-btn {
+    right: -20px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 10px; /* Reduce el tamaño de los puntos para pantallas medianas */
+  }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+  .slick-slide div {
+    font-size: 1.2rem; /* Reduce aún más el tamaño del texto en pantallas pequeñas */
+    padding: 40px 10px;
+  }
+
+  .nav-btn {
+    width: 28px;   /* Ajusta el tamaño para pantallas pequeñas */
+    height: 28px;  /* Ajusta el tamaño para pantallas pequeñas */
+    font-size: 12px;
+  }
+
+  .prev-btn {
+    left: -15px;
+  }
+
+  .next-btn {
+    right: -15px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 8px; /* Reduce el tamaño de los puntos para pantallas pequeñas */
+  }
+
+  .carrusel-container {
+    margin: 20px auto; /* Reduce el margen en pantallas más pequeñas */
+    padding: 0 10px;   /* Reduce el relleno en pantallas más pequeñas */
+  }
+}
+
+/* Puntos de navegación */
+.slick-dots li button:before {
+  color: #005baa !important;
+  font-size: 12px;  /* Tamaño más pequeño para pantallas grandes */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffcc00 !important;
+}
+
+/* Botones de navegación personalizados */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: rgba(0, 32, 64, 0.8); /* Fondo oscuro con transparencia */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;   /* Tamaño más pequeño */
+  height: 36px;  /* Tamaño más pequeño */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: rgba(0, 32, 64, 1);
+}
+
+.prev-btn {
+  left: -30px;
+}
+
+.next-btn {
+  right: -30px;
+}
+
+.slick-prev, .slick-next {
+  display: none !important; /* Oculta los botones de Slick predeterminados */
+}

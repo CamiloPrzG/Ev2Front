@@ -1,0 +1,82 @@
+.footer {
+  background-color: #145374;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;  /* fila para logo y textos uno al lado del otro */
+  align-items: center;  /* centrado vertical */
+  gap: 4rem;            /* separación entre contacto y logo */
+  justify-content: center;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: row;  /* fila para los textos */
+  gap: 3.5rem;          /* separación horizontal entre bloques de texto */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: left;
+  min-width: 180px;
+}
+
+.footer-item svg {
+  margin: 0;          /* elimina margen abajo para mejor alineación */
+  flex-shrink: 0;     /* para que el icono no se reduzca */
+}
+
+.footer-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+  min-width: 180px;
+  gap: 0.5rem;
+}
+
+.footer-logo img {
+  width: 5rem;
+}
+
+.footer-logo p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: white;
+}
+
+.footer-copy {
+  font-size: 0.65rem;
+  color: #cccccc;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive: apilar columnas en pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .footer-contact {
+    justify-content: center;
+  }
+}

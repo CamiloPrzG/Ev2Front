@@ -1,0 +1,71 @@
+.servicio-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.servicios-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Mínimo 220px por tarjeta */
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.servicio-card p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Ajustes para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+  .servicio-card {
+    width: 180px; /* Reducir el tamaño de las tarjetas en pantallas medianas */
+  }
+
+  .servicios-container {
+    padding: 20px; /* Reduce el padding para pantallas medianas */
+  }
+
+  .servicio-card p {
+    font-size: 0.9rem; /* Reducir el tamaño del texto */
+  }
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .servicio-card {
+    width: 160px; /* Ajustar el tamaño aún más en pantallas pequeñas */
+    padding: 0.8rem; /* Reducir el padding */
+  }
+
+  .servicios-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Reducir el tamaño mínimo de las tarjetas */
+    padding: 10px; /* Ajustar el padding */
+  }
+
+  .icon {
+    font-size: 2.5rem; /* Reducir el tamaño de los iconos */
+  }
+
+  .servicio-card p {
+    font-size: 0.85rem; /* Reducir el tamaño del texto */
+  }
+}

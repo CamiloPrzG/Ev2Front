@@ -1,0 +1,263 @@
+/* === ESTRUCTURA GENERAL DE LA APP === */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* === FORMULARIO DE CONTACTO === */
+.contact-form {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.required {
+  color: red;
+}
+
+input,
+select,
+textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 150px;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background-color: #357ABD;
+}
+
+/* === SECCIÓN MUNICIPALIDAD === */
+.municipalidad {
+  background-image: url('/images/muni.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.municipalidad h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.municipalidad p {
+  text-align: justify;
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  color: white;
+}
+
+.contenedor-transparente {
+  background-color: rgba(47, 44, 44, 0.62);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-top: -60px;
+}
+
+/* === SECCIÓN "EL ALCALDE" === */
+.alcalde {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.alcalde-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.alcalde-foto {
+  width: 100%;              /* Que se adapte al contenedor */
+  max-width: 500px;         /* Limita el ancho máximo */
+  height: auto;             /* Mantiene proporción */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;         /* valor por defecto (móvil) */
+}
+
+@media (min-width: 600px) {
+  .alcalde-foto {
+    margin-top: 40px;       /* tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .alcalde-foto {
+    margin-top: 60px;       /* escritorio */
+  }
+}
+
+.alcalde-contenido p {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.alcalde-titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* === SECCIÓN CONCEJO MUNICIPAL === */
+.concejo {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.concejo-titulo {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.concejo-foto {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.concejo-lista-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.concejo-lista-simple h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.concejo-lista-simple button {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 12px;
+}
+
+.concejo-lista-simple button:hover {
+  background-color: #357ABD;
+}
+
+/* === TARJETAS DE DOCUMENTOS === */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 220px;
+  min-height: 250px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-weight: bold;
+  color: #c62828;
+  margin-bottom: 0.5rem;
+  margin-top: 6rem;
+}
+
+.pdf-icon {
+  width: 40px;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.pdf-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* === MEDIA QUERIES === */
+@media (min-width: 768px) {
+  .alcalde-contenido {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  .municipalidad h2 {
+    font-size: 2.5rem;
+  }
+
+  .municipalidad p {
+    font-size: 1.2rem;
+  }
+}
